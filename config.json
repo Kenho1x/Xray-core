@@ -1,25 +1,34 @@
 {
-  "log": { "loglevel": "warning" },
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
       "port": 8080,
+      "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "0d9f8621-6623-4191-b211-1149fec99649"
+            "id": "0d9f8621-6623-4191-b211-1149fec99649",
+            "flow": ""
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "ws"
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/Atomic"     // ← EXACTEMENT le même que dans DarkTunnel
+        }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {}
     }
   ]
 }
