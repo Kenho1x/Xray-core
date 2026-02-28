@@ -20,7 +20,7 @@
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/Atomic"     // ← EXACTEMENT le même que dans DarkTunnel
+          "path": "/Atomic"
         }
       }
     }
